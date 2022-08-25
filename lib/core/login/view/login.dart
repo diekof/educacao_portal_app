@@ -26,45 +26,37 @@ class Login extends StatelessWidget {
                   child: Container(
                     width: screenWidthSize,
                     child: Column(
-                      mainAxisAlignment: MainAxisAlignment.end,
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Container(
-                            padding: EdgeInsets.only(bottom: 20),
                             child: Image.asset(
-                              Assets.cidadeLogoWhite,
-                              cacheHeight: 100,
-                              cacheWidth: 100,
-                            )),
-                        Padding(
-                          padding: EdgeInsets.only(top: 8.0, bottom: 50),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text(
-                                'Portal ',
-                                style: GoogleFonts.nanumGothic(
-                                  fontSize: 20,
-                                  color:
-                                      Theme.of(context).colorScheme.secondary,
-                                ),
-                                /*TextStyle(
-                                  fontSize: 20,
-                                  color: Colors.white,
-                                ),*/
-                                textAlign: TextAlign.center,
+                          Assets.cidadeLogoWhite,
+                        )),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              'Portal ',
+                              style: GoogleFonts.nanumGothic(
+                                fontSize: 20,
+                                color: Theme.of(context).colorScheme.secondary,
                               ),
-                              Text(
-                                'Educação',
-                                style: GoogleFonts.nanumGothic(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold,
-                                  color:
-                                      Theme.of(context).colorScheme.secondary,
-                                ),
-                                textAlign: TextAlign.center,
+                              /*TextStyle(
+                                fontSize: 20,
+                                color: Colors.white,
+                              ),*/
+                              textAlign: TextAlign.center,
+                            ),
+                            Text(
+                              'Educação',
+                              style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                                color: Theme.of(context).colorScheme.secondary,
                               ),
-                            ],
-                          ),
+                              textAlign: TextAlign.center,
+                            ),
+                          ],
                         ),
                       ],
                     ),
@@ -72,17 +64,10 @@ class Login extends StatelessWidget {
                 ),
                 LoginForm(),
                 Expanded(
-                  child: Container(
-                      padding: EdgeInsets.only(
-                          top: screenHeightSize > 667
-                              ? screenHeightSize * 0.1
-                              : 0),
-                      child: Image.asset(
-                        Assets.prediosWhite,
-                        fit: BoxFit.cover,
-                        cacheHeight: 160,
-                        cacheWidth: 180,
-                      )),
+                  child: Image.asset(
+                    Assets.prediosWhite,
+                    fit: BoxFit.fitHeight,
+                  ),
                 ),
               ],
             ),

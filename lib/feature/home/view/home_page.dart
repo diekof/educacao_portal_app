@@ -7,38 +7,40 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double widthSize = MediaQuery.of(context).size.width;
-    double heightSize = MediaQuery.of(context).size.height;
+    final size = MediaQuery.of(context).size;
 
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(100.0),
+        preferredSize: const Size.fromHeight(100.0),
         child: AppBar(
-          
-          leading: Icon(Icons.close),
-          title: Text(
-            'Educa',
-            style: TextStyle(
-              color: AppColors.colorScheme.secondary,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
           flexibleSpace: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Icon(Icons.close),
-              Icon(Icons.close),
-              Icon(Icons.close),
+              Text(
+                'Educa',
+                style: TextStyle(
+                  color: AppColors.colorScheme.secondary,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 25,
+                ),
+              ),
+              Text(
+                'Seja bem-vindo USUÁRIO!',
+                style: TextStyle(
+                  color: AppColors.colorScheme.secondary,
+                  fontSize: 15,
+                ),
+              ),
             ],
           ),
-          actions: [Icon(Icons.close)],
+          actions: [],
         ),
       ),
       body: Container(
         alignment: Alignment.center,
-        height: heightSize * 0.9,
-        width: widthSize,
-        color: Colors.amber,
-        child: Text('homepage'),
+        height: size.height * 0.70,
+        width: size.width,
+        child: const Text('homepage'),
       ),
     );
   }

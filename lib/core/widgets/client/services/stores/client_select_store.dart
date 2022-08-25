@@ -1,29 +1,30 @@
-import 'package:http/http.dart';
 import 'package:mobx/mobx.dart';
-import '../models/cliente_model.dart';
-import '../repository/repository.dart';
 
-part 'client_select.g.dart';
+part 'client_select_store.g.dart';
 
-class ClientSelect = _ClientSelectBase with _$ClientSelect;
+class ClientSelect = ClientSelectBase with _$ClientSelect;
 
-abstract class _ClientSelectBase with Store {
+abstract class ClientSelectBase with Store {
   @observable
-  late Repository _repository;
+  String? dropDownValue;
   @observable
-  Clients cliente = Clients();
-  @observable
-  List<String> list = [];
-
-  _ClientSelectBase(this._repository);
+  int? dropDownValueInt;
 
   @action
-  Future<Map<dynamic, String>> getClientList() async {
-    return _repository.getClientSelection();
+  void setDropDownValue(newValue) {
+    dropDownValue = newValue;
   }
 
   @action
-  void addClientList(Clients cliente) {
-    list.add(cliente.cliente_Nome!);
+  int getClient() {
+    switch (dropDownValue) {
+      case 'Alta Floresta':
+        return 1;
+      case 'Nova Marilândia':
+        return 2;
+      default:
+        print(dropDownValue.toString());
+        return 0;
+    }
   }
 }

@@ -11,6 +11,8 @@ class Assets {
   static const String professoraAula =
       'assets/ilustracoes/ilustracao_teacher.png';
 
+  static const String pinLocal = 'assets/cidade_assets/pin.png';
+
   static const String ilustracaoLocal =
       'assets/ilustracoes/ilustracao_local.png';
 

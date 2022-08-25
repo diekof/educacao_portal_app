@@ -1,5 +1,5 @@
-import '../models/cliente_model.dart';
+import '../model/client_model.dart';
 
 abstract class Repository {
-  Future<Map<dynamic, String>> getClientSelection();
+  Future<List<ClientModel>> getClientSelection();
 }

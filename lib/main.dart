@@ -1,8 +1,6 @@
+import 'package:educacao_portal_app/feature/welcome/view/welcome_page.dart';
 import 'package:flutter/material.dart';
-
 import 'core/theme/app_theme.dart';
-import 'feature/home/view/home_page.dart';
-import 'feature/welcome/view/welcome_page.dart';
 
 void main() async {
   runApp(const MyApp());
